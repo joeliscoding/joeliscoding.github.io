@@ -1,0 +1,33 @@
+---
+import ThemeButton from "@components/ThemeButton.astro";
+---
+
+<header class="mb-16">
+    <nav class="flex justify-between py-4 px-2">
+        <ul class="flex gap-3">
+            <li class="inline">
+                <a href="/" class="text-base">home</a>
+            </li>
+            <li>
+                <a href="/projects" class="text-base">projects</a>
+            </li>
+            <li>
+                <a href="/blog" class="text-base">blog</a>
+            </li>
+        </ul>
+
+        <ThemeButton />
+    </nav>
+
+    <hr />
+</header>
+
+<style lang="scss">
+    a {
+        text-decoration: none;
+        transition: color 0.1s ease-in-out;
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+</style>

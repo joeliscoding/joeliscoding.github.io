@@ -1,0 +1,115 @@
+---
+import Base from "@layouts/Base.astro";
+
+import { Icon } from "astro-icon/components";
+
+import laptopCat from "@assets/img/laptop-cat.png";
+import WiggleEffect from "@components/WiggleEffect.astro";
+---
+
+<head>
+    <title>joeliscoding</title>
+</head>
+
+<Base title="joeliscoding" description="Personal website of joeliscoding">
+    <WiggleEffect />
+
+    <div class="flex flex-col w-full gap-4">
+        <section id="intro">
+            <img
+                src={laptopCat.src}
+                id="laptop-cat"
+                class="laptop-cat w-md float-right"
+                alt="Cat in front of a laptop doodle"
+            />
+
+            <h1 class="text-4xl font-semibold mb-4">hi, i'm joel!</h1>
+
+            <p class="text-lg">
+                i'm a computer science student from germany. i like open source
+                software and music. you found my little corner of the web,
+                thanks for stopping by :)
+            </p>
+        </section>
+
+        <section id="socials">
+            <h2 class="text-2xl font-semibold mb-4">socials</h2>
+            <div id="social-links" class="grid grid-cols-4">
+                <a href="" class="flex items-center">
+                    <Icon name="mail" class="inline mr-3 size-5" />
+                    <span class="flex flex-col">
+                        <span class="text-lg"> e-mail </span>
+                        <span class="secondary-text text-sm">
+                            placeholder
+                        </span>
+                    </span>
+                </a>
+                <a href="#" class="flex items-center">
+                    <Icon name="key" class="inline mr-3 size-5" />
+                    <span class="flex flex-col">
+                        <span class="text-lg"> pgp key </span>
+                        <span class="secondary-text text-sm">
+                            XXXXXXXXXXXXXXXX
+                        </span>
+                    </span>
+                </a>
+                <a
+                    href="https://github.com/joeliscoding"
+                    class="flex items-center"
+                >
+                    <Icon name="github" class="inline mr-3 size-5" />
+                    <span class="flex flex-col">
+                        <span class="text-lg"> github </span>
+                        <span class="secondary-text text-sm">
+                            @joeliscoding
+                        </span>
+                    </span>
+                </a>
+                <a href="https://x.com/joeliscoding" class="flex items-center">
+                    <Icon name="x" class="inline mr-3 size-5" />
+                    <span class="flex flex-col">
+                        <span class="text-lg"> twitter </span>
+                        <span class="secondary-text text-sm">
+                            @joeliscoding
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section id="fish">
+            <div
+                class="absolute right-10 w-64 h-32 border border-solid border-current"
+            >
+                <span id="fish-ascii-art" class="font-mono"> </span>
+            </div>
+        </section>
+    </div>
+</Base>
+
+<style lang="scss" define:vars={{ laptopCatSrc: `url(${laptopCat.src})` }}>
+    .laptop-cat {
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        filter: url(#wiggle);
+        shape-outside: var(--laptopCatSrc);
+        shape-margin: 1em;
+        margin-left: 1em;
+        @media (max-width: 880px) {
+            float: none;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+    }
+
+    #social-links {
+        @media (max-width: 1150px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+</style>

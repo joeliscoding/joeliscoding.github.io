@@ -1,0 +1,49 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+
+interface Props {
+    title: string;
+    description: string;
+}
+
+const props = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead {...props} />
+    </head>
+
+    <body>
+        <div id="container" class="w-auto max-w-2/3 m-auto">
+            <Header />
+
+            <slot />
+        </div>
+    </body><style lang="scss"></style>
+
+    <script is:inline>
+        function applyTheme() {
+            var storedTheme =
+                localStorage.getItem("theme") ||
+                (window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light");
+            document.documentElement.setAttribute("data-theme", storedTheme);
+        }
+
+        applyTheme();
+        document.addEventListener("astro:after-swap", applyTheme);
+
+        document.addEventListener("click", function (e) {
+            var toggle = e.target.closest("#theme-toggle");
+            if (!toggle) return;
+            var current = document.documentElement.getAttribute("data-theme");
+            var target = current === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", target);
+            localStorage.setItem("theme", target);
+        });
+    </script>
+</html>
