@@ -3,18 +3,11 @@ import Base from "@layouts/Base.astro";
 
 import { Icon } from "astro-icon/components";
 
-import laptopCat from "@assets/img/laptop-cat.png";
-import WiggleEffect from "@components/WiggleEffect.astro";
+import laptopCat from "@assets/img/laptop-cat-boil.webp";
 import SpinningFish from "@components/SpinningFish.astro";
 ---
 
-<head>
-    <title>joeliscoding</title>
-</head>
-
 <Base title="joeliscoding" description="Personal website of joeliscoding">
-    <WiggleEffect />
-
     <div class="flex flex-col w-full gap-16">
         <section id="intro">
             <img
@@ -82,13 +75,18 @@ import SpinningFish from "@components/SpinningFish.astro";
             <div
                 class="absolute right-10 h-64 aspect-4/3 border border-solid border-current"
             >
-                <p id="window-title" class="text-center text-xs p-1">
+                <p
+                    id="window-title"
+                    class="absolute left-0 right-0 text-center text-xs p-1"
+                >
                     fish.txt
                 </p>
                 <span class="absolute right-0 top-0">
                     <Icon name="close" class="size-4 m-1" />
                 </span>
-                <SpinningFish />
+                <div class="h-full flex justify-center items-center">
+                    <SpinningFish />
+                </div>
             </div>
         </section>
     </div>
@@ -99,7 +97,6 @@ import SpinningFish from "@components/SpinningFish.astro";
         image-rendering: pixelated;
         image-rendering: -moz-crisp-edges;
         image-rendering: crisp-edges;
-        filter: url(#wiggle);
         shape-outside: var(--laptopCatSrc);
         shape-margin: 1em;
         margin-left: 1em;

@@ -13,12 +13,12 @@ const frames = content
     .filter((frame) => frame.length > 0);
 ---
 
-<pre id="fish-ascii-art" class="font-mono text-xs">{frames[0]}</pre>
+<pre id="fish-ascii-art" class="font-mono text-xs select-none">{frames[0]}</pre>
 
 <script define:vars={{ frames }}>
     let i = 0;
     setInterval(() => {
         i = (i + 1) % frames.length;
         document.getElementById("fish-ascii-art").textContent = frames[i];
-    }, 200);
+    }, 80);
 </script>
