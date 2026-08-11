@@ -13,7 +13,10 @@ const frames = content
     .filter((frame) => frame.length > 0);
 ---
 
-<pre id="fish-ascii-art" class="font-mono text-xs select-none">{frames[0]}</pre>
+<pre
+    aria-hidden="true"
+    id="fish-ascii-art"
+    class="font-mono text-xs select-none">{frames[0]}</pre>
 
 <script define:vars={{ frames }}>
     let i = 0;
