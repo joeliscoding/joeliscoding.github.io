@@ -1,0 +1,28 @@
+/* AUTHOR */
+Name: joel
+Website: https://joeliscoding.github.io
+Location: germany
+
+/* SITE */
+Name: joeliscoding
+URL: https://joeliscoding.github.io
+Language: english
+
+/* TECHNOLOGY */
+Astro
+TypeScript
+HTML
+SCSS
+Tailwind CSS
+
+/* NOTES */
+fun little tools i discovered while creating this website:
+- https://lineboiler.com/
+  used for animation of my artwork (last checked: 2026-08-11)
+
+i really appriciate you checking out the stuff i made
+enjoy your day, wherever you are :)
+
+         ,/\__/\
+ \￣￣￣￣￣\·__· =
+  \        \  ૮ )
