@@ -3,25 +3,13 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
     title: string;
-    align: "left" | "right";
+    class: string;
 }
 
-const { title, align } = Astro.props;
-
-const alignProperty = align === "left" ? "left-10" : "right-10";
+const { title, class: className, ...rest } = Astro.props;
 ---
 
-<div
-    class:list={[
-        alignProperty,
-        "absolute",
-        "h-64",
-        "aspect-4/3",
-        "border",
-        "border-solid",
-        "border-current",
-    ]}
->
+<div class:list={["absolute", "border", className]} {...rest}>
     <p
         id="window-title"
         class="absolute left-0 right-0 text-center text-xs p-1"
