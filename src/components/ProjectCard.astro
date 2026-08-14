@@ -1,0 +1,36 @@
+---
+interface Props {
+    imgSrc: string;
+    imgAlt: string;
+    title: string;
+    description: string;
+    href: string;
+}
+
+const { imgSrc, imgAlt, title, description, href } = Astro.props;
+---
+
+<a class="aspect-4/3 outline max-w-lg m-auto" href={href}>
+    <img src={imgSrc} class="border-b" alt={imgAlt} />
+    <h3 class="p-2">{title}</h3>
+    <p class="text-sm px-2">{description}</p>
+</a>
+
+<style>
+    a {
+        transition: box-shadow 0.4s ease-in-out;
+        box-shadow: 0 0;
+        &:hover {
+            box-shadow: 0.5rem 0.5rem;
+        }
+    }
+
+    img {
+        filter: grayscale(1);
+        transition: filter 0.4s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+</style>
