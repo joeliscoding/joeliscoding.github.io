@@ -16,6 +16,14 @@
     src: url("/fonts/ibm-plex-mono-v20-latin-600.woff2") format("woff2");
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans Symbols 2';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/noto-sans-symbols-2-v25-braille-regular.woff2') format('woff2');
+}
+
 :root {
     --font-mono: "IBM Plex Mono", ui-monospace, monospace;
     --hover-opacity: 0.6;
