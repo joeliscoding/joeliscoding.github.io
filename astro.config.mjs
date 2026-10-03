@@ -7,7 +7,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://joeliscoding.github.io',
+  site: 'https://joeliscod.ing',
 
   devToolbar: { enabled: false },
 

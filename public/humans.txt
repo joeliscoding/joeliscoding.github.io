@@ -1,11 +1,11 @@
 /* AUTHOR */
 Name: joel
-Website: https://joeliscoding.github.io
+Website: https://joeliscod.ing
 Location: germany
 
 /* SITE */
 Name: joeliscoding
-URL: https://joeliscoding.github.io
+URL: https://joeliscod.ing
 Language: english
 
 /* TECHNOLOGY */
@@ -24,5 +24,5 @@ i really appriciate you checking out the stuff i made
 enjoy your day, wherever you are :)
 
          ,/\__/\
- \￣￣￣￣￣\·__· =
+ \￣￣￣￣\·__· =
   \        \  ૮ )
